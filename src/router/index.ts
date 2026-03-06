@@ -7,6 +7,7 @@ const Login = () => import('@/views/Login.vue');
 const Registro = () => import('@/views/Registro.vue');
 const Seccion1 = () => import('@/views/secciones/Seccion1.vue');
 const Seccion = () => import('@/views/secciones/Seccion.vue');
+const DeviceHardware = () => import('@/views/DeviceHardware.vue');
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -35,6 +36,13 @@ const routes: Array<RouteRecordRaw> = [
       {
         path: 'seccion1',
         component: Seccion1
+      },
+      {
+        path: 'hardware',
+        component: DeviceHardware,
+        meta: {
+          title: 'Riksiri - Hardware del Dispositivo',
+        }
       },
       {
         path: ':name',

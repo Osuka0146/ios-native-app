@@ -28,7 +28,14 @@
                 </ion-menu-toggle>
               </div>
             </ion-accordion>
-          </ion-accordion-group> 
+          </ion-accordion-group>
+          <ion-item-divider></ion-item-divider>
+          <ion-menu-toggle :auto-hide="true">
+            <ion-item router-direction="root" router-link="/seccion/hardware" lines="none" :detail="false">
+              <ion-icon :icon="hardwareChipOutline" slot="start"></ion-icon>
+              <ion-label>Hardware del Dispositivo</ion-label>
+            </ion-item>
+          </ion-menu-toggle> 
         </ion-list>
       </ion-content>
     </ion-menu>
@@ -53,7 +60,7 @@ const router = useRouter();
 const userStore = useUserStore();
 // aquí es donde se iomportan las funciones y componentes necesarios 
 import { ref } from 'vue';
-import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar, IonAvatar, IonButton, IonAccordionGroup, IonAccordion } from '@ionic/vue';
+import { IonButtons, IonContent, IonHeader, IonMenu, IonMenuButton, IonPage, IonTitle, IonToolbar, IonAvatar, IonButton, IonAccordionGroup, IonAccordion, IonItemDivider } from '@ionic/vue';
 import {
 IonApp,
 IonIcon,
@@ -81,6 +88,7 @@ trashOutline,
 trashSharp,
 warningOutline,
 warningSharp,
+hardwareChipOutline,
 } from 'ionicons/icons';
 
 const selectedIndex = ref(0);
